@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Cadastro usuario</h2>
+            <form action="">
+                <div class="sob-container">
+                    <div class="box-dados">
+                        <input type="text" id="name" class="input-box" required>
+                        <label for="name">Nome</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+                    <div class="box-dados">
+                        <input type="text" id="email" class="input-box" required>
+                        <label for="email">Email</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+                </div>
+
+
+                <div class="sub-container">
+                    <div class="box-dados">
+                        <input type="text" id="cep" required>
+                        <label for="cep">CEP</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+
+                    <div class="box-dados">
+                        <input type="text" id="end" required>
+                        <label for="end">Endereço</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+
+                    <div class="box-dados">
+                        <input type="text" id="num" required>
+                        <label for="num">Número</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+                    <div class="box-dados">
+                        <input type="text" id="bairro" placeholder="" required>
+                        <label for="bairro">Bairro</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+                    <div class="box-dados">
+                        <input type="text" id="city" required>
+                        <label for="city">Cidade</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+                    <div class="box-dados">
+                        <input type="text" id="state" required>
+                        <label for="state">Estado</label>
+                        <i><img src="./imagens/error-icon.png" class="iconerror"></i>
+                        <i><img src="./imagens/success-icon.png" class="iconsuccess"></i>
+                    </div>
+                </div>
+
+                <button class="btn" id="btn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
