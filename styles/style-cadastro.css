@@ -7,40 +7,48 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root{
+    --light:#CAF8FA;
+    --medium-one:#19ECF7;
+    --medium-two:#22a6ad;
+    --dark-one:#0e7d83;
+    --dark-two:#074649;
+    --dark-gray:#2e3033;
+    --light-gray: rgb(212, 212, 212);
+}
+
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top ,#B5408C,#1E1A4C) ;
+    background:rgb(36, 35, 35);
     background-repeat: no-repeat;
     background-size: cover;   
     height: 100vh;
+    color: var(--light);
 }
 
 .card{
-    background: #ffffff94;
+    background: var(--dark-gray);
     width: 500px;
-    height: 550px;
-    margin: auto;
+    height: 650px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.445); 
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
     text-align: center;
-    margin:auto;
 }
 
 h2{
-    color:#1E1A4C;
+    color:var(--medium-one);
     margin: 15px;
     font-size: 30pt;
 
  }
 
 .box-dados{
-    /* background: rgb(0, 204, 255); */
     position: relative;
     margin-bottom: 10px;
-    color: #1E1A4C;
+    color: var(--ligh-blue);
 }
 
 .iconerror{
@@ -73,14 +81,13 @@ h2{
     padding: 10px 20px 0px 10px;
     border:none;
     outline: none; 
-    border-bottom:2px solid #1E1A4C ;
+    border-bottom:2px solid var(--dark-one) ;
     color: white;
     font-size: 16pt;
 }
 
 .box-dados input:focus{
-    border-bottom: 2px solid #5f57b6;
-    background: #372f8a;
+    border-bottom: 2px solid var(--light);
     transition: all .2s ease-in;
     position: relative;
 }
@@ -100,7 +107,7 @@ h2{
     margin-top: 0px;
     font-size: 12pt;
     transition: all 0.3s ease-in-out;
-    color: #372f8a;
+    color: var(--light);
 
 }
 
@@ -108,16 +115,15 @@ h2{
     margin-top: 0px;
     font-size: 12pt;
     transition: all 0.3s ease-in-out;
-    color: rgb(0, 140, 255);
+    color: var(--medium-two);
 }
 
 
 .box-dados input:valid{
-background: #372f8a;
-border-bottom: 2px solid rgb(0, 140, 255);
+border-bottom: 2px solid var(--medium-one);
 }
 
-.box-dados input:valid + .iconsuccess{
+.box-dados input:valid > .iconsuccess{
     visibility: visible;
 }
 
@@ -138,30 +144,29 @@ border-bottom: 2px solid rgb(0, 140, 255);
 
 .btn{
     padding: 8px 12px;
-    background: #372f8a;
+    background: var(--medium-two);
     color:white;
-    border: 2px solid #372f8a;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 16pt;
-    width: 40%;
+    width: 100%;
     box-shadow: 2px 2px 3px black;
 }
 
 .btn:hover{
-    background: #252061;
+    background: var(--dark-one);
     color:white;
-    border: 2px solid #372f8a;
+    border: none;
     transition: all .1s ease-in-out;
 }
 
 /* ----------Validação de erro e sucesso para o campo de formulario-------------- */
 
 .error{
-    color: #DC2C22 ;
-
+    color: #da6724 ;
 }
 
 .error input{
@@ -172,29 +177,27 @@ border-bottom: 2px solid rgb(0, 140, 255);
 }
 
 .error > .box-dados > label{
-    color:#DC2C22 ;
-}
-
-.error input:valid  {
-    border-bottom:2px solid #DC2C22 ;
-}
-
-.error input:valid + label{
-    color:  #DC2C22;
+    color:#da2d24 ;
 }
 
 .error input:focus {
     border-bottom:2px solid #DC2C22 ;
 }
 .error input:focus + label{
-    color:  #DC2C22 ;
+    color:  #da6724 ;
+}
+.error input:valid + .iconerror{
+    display: none;
 }
 
-.success input:valid {
-    border-bottom:2px solid #0aa02b ;
+/* ----------------validação de sucesso-------------- */
+
+.success input:valid+ .success{
+    border-bottom:2px solid var(--medium-one) ;
+    visibility: visible;
 }
 .success input:valid + label{
-    color:  #0aa02b ;
+    color:  var(--medium-one) ;
 }
 .success .iconsuccess{
     visibility: visible;

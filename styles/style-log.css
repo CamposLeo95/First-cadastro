@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --light:#CAF8FA;
+    --medium-one:#19ECF7;
+    --medium-two:#22a6ad;
+    --dark-one:#0e7d83;
+    --dark-two:#074649;
+    --dark-gray:#2e3033;
+    --light-gray: rgb(212, 212, 212);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgb(36, 35, 35);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    height: 100vh;
+    color: var(--light);
+}
+
+.card{
+    background: var(--dark-gray);
+    width: 500px;
+    height: 650px;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
+    text-align: center;
+}
+.card-login{
+    background: var(--dark-gray);
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
+    text-align: center;
+}
+
+h2{
+    color:var(--medium-one);
+    margin: 15px;
+    font-size: 30pt;
+
+ }
+
+.box-dados{
+    position: relative;
+    margin-bottom: 10px;
+    color: var(--ligh-blue);
+}
+
+.iconerror{
+    width: 20px;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 27px;
+    margin-right: 5px;
+}
+
+.iconsuccess{
+    width: 15px;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 23px;
+    margin-right: 5px;
+
+}
+
+
+.box-dados input{
+    background-color: transparent;
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 20px;
+    padding: 10px 20px 0px 10px;
+    border:none;
+    outline: none; 
+    border-bottom:2px solid var(--dark-one) ;
+    color: white;
+    font-size: 16pt;
+}
+
+.box-dados input:focus{
+    border-bottom: 2px solid var(--light);
+    transition: all .2s ease-in;
+    position: relative;
+}
+
+.box-dados label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 20px;
+    font-size: 15pt;
+    cursor:auto;
+    font-weight: bold;
+
+}
+
+.box-dados input:focus + label{
+    margin-top: 0px;
+    font-size: 12pt;
+    transition: all 0.3s ease-in-out;
+    color: var(--light);
+
+}
+
+.box-dados input:valid + label{
+    margin-top: 0px;
+    font-size: 12pt;
+    transition: all 0.3s ease-in-out;
+    color: var(--medium-two);
+}
+
+
+.box-dados input:valid{
+border-bottom: 2px solid var(--medium-one);
+}
+
+.box-dados input:valid > .iconsuccess{
+    visibility: visible;
+}
+
+
+.sub-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sub-container > .box-dados {    
+    width: 48%;
+}
+
+
+
+/* ------------------Estilizando o Botão ----------------*/
+
+.btn{
+    padding: 8px 12px;
+    background: var(--medium-two);
+    color:white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 16pt;
+    width: 100%;
+    box-shadow: 2px 2px 3px black;
+}
+
+a{
+    display: block;
+    color: var(--light);
+    margin-top: 40px;
+
+}
+
+.btn:hover{
+    background: var(--dark-one);
+    color:white;
+    border: none;
+    transition: all .1s ease-in-out;
+}
+
+/* ----------Validação de erro e sucesso para o campo de formulario-------------- */
+
+.error{
+    color: #da6724 ;
+}
+
+.error input{
+    border-bottom:2px solid #DC2C22 ;
+}
+.error .iconerror{
+    visibility: visible;
+}
+
+.error > .box-dados > label{
+    color:#da2d24 ;
+}
+
+.error input:focus {
+    border-bottom:2px solid #DC2C22 ;
+}
+.error input:focus + label{
+    color:  #da6724 ;
+}
+.error input:valid + .iconerror{
+    display: none;
+}
+
+/* ----------------validação de sucesso-------------- */
+
+.success input:valid+ .success{
+    border-bottom:2px solid var(--medium-one) ;
+    visibility: visible;
+}
+.success input:valid + label{
+    color:  var(--medium-one) ;
+}
+.success .iconsuccess{
+    visibility: visible;
+}
