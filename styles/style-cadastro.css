@@ -18,24 +18,25 @@
 }
 
 .container{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background:rgb(36, 35, 35);
     background-repeat: no-repeat;
     background-size: cover;   
-    height: 100vh;
     color: var(--light);
 }
 
 .card{
     background: var(--dark-gray);
     width: 500px;
-    height: 650px;
+    height: 98%;
     padding: 20px;
     border-radius: 3px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
     text-align: center;
+    margin: 5px 0px;
 }
 
 h2{

@@ -127,17 +127,28 @@ const pesquisarCep = async() =>{
         const response = await fetch(url)
         const dados = await response.json()
         preencherForm(dados)  
-        checkEndereco()
+        checkEndereco()        
     }
 }
 
 //------------ Função para inserir os dados nos inputs---------------
 
 function preencherForm(endereco){
+
+    if(endereco.erro){
+        alert('CEP invalido')
+    document.querySelector('#end').value = ''
+    document.querySelector('#bairro').value = ''
+    document.querySelector('#city').value = ''
+    document.querySelector('#state').value = ''
+        // inserirClassErro()
+    }else{
     document.querySelector('#end').value = endereco.logradouro
     document.querySelector('#bairro').value = endereco.bairro
     document.querySelector('#city').value = endereco.localidade
     document.querySelector('#state').value = endereco.uf
+    }
+
 }
 
 function checkEndereco(){
