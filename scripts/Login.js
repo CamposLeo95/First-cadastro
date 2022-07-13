@@ -29,7 +29,7 @@ signInWithEmailAndPassword(auth, loginEmail.value, loginPass.value)
     const user = userCredential.user;
 
     alert('Usuario conectado')
-    window.location.href = 'http://127.0.0.1:5500/FirstCadastro/home.html'
+    window.location.href = 'https://camposleo95.github.io/FirstCadastro/home.html'
 
   })
   .catch((error) => {
