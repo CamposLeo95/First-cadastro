@@ -24,7 +24,7 @@ document.getElementById("btn").addEventListener("click", () => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert(`Usuario cadastrado com sucesso`);
-      window.location.href = 'http://127.0.0.1:5500/FirstCadastro/index.html'
+      window.location.href = 'https://camposleo95.github.io/FirstCadastro/'
 
     })
     .catch((error) => {
