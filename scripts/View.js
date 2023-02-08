@@ -21,10 +21,12 @@ nome.addEventListener('keyup', ()=>{
 })
 
 email.addEventListener('keyup', ()=>{
-    if(email.value.length <= 10){   
-        email.parentElement.setAttribute('class', 'box-dados error')
+    let verifyEmail = email.value
+
+    if(verifyEmail.length <= 10 ){   
+        verifyEmail.parentElement.setAttribute('class', 'box-dados error')
     }else{
-        email.parentElement.setAttribute('class', 'box-dados success')
+        verifyEmail.parentElement.setAttribute('class', 'box-dados success')
     }
 })
 
